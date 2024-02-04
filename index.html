@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PARAS AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function signin(event) {
+        event.target.classList.add("hidden");
+        const loader = document.querySelector(".loader");
+
+        loader.classList.remove("hidden");
+        setTimeout(() => {
+          loader.classList.add("hidden");
+          document.querySelector(".main").classList.remove("hidden");
+        }, 2000);
+      }
+    </script>
+  </head>
+  <body class="w-auto h-full bg-white">
+    <main class="flex h-full">
+      <div class="flex flex-1 self-center justify-center">
+        <div class="flex flex-col align-center justify-center h-100">
+          <img src="./logo.png" alt="Logo" class="w-64 mb-5" />
+
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#9b96f0] text-white text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 shadow-lg"
+            type="button"
+            onclick="signin(event)"
+          >
+            Sign in to continue
+          </button>
+
+          <div
+            class="loader hidden inline-block m-auto h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            role="status"
+          >
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Loading...</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="main flex flex-col h-screen bg-white hidden">
+        <header
+          class="flex items-center justify-between px-6 py-6 border-b bg-white shadow-md animate-fadeIn animation-delay-500"
+        >
+          <img src="./logo.png" alt="Logo" class="w-32" />
+        </header>
+        <div
+          class="sticky top-0 mt-3 z-50 p-4 bg-white shadow-md animate-fadeIn animation-delay-1000 w-[90%] m-auto rounded-md"
+        >
+          <div class="flex items-center space-x-4">
+            <img
+              src="https://uspoloassn.in/cdn/shop/files/6_1f59ff7f-e836-4e58-aa86-d809873d6194_1296x.jpg?v=1692215809"
+              alt="Black Shirt Image"
+              class="w-16 h-16 object-cover rounded-lg shadow-lg"
+              width="100"
+              height="100"
+              style="aspect-ratio: 100 / 100; object-fit: cover"
+            />
+            <div class="flex-1">
+              <h2 class="text-sm font-semibold">Black Shirt</h2>
+              <p class="text-gray-500 dark:text-gray-400 text-xs">
+                This black shirt is made from 100% organic cotton. It's soft,
+                comfortable, and perfect for everyday wear.
+              </p>
+              <div class="flex items-center justify-between mt-2">
+                <span class="text-sm font-bold">$99.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2
+          class="text-lg font-medium bg-white p-4 mt-3 border-b-2 border-solid border-slate-500"
+        >
+          Results
+        </h2>
+        <div
+          class="flex flex-1 overflow-hidden animate-fadeIn animation-delay-1500"
+        >
+          <div class="w-full p-4 overflow-y-auto bg-white">
+            <div class="space-y-4">
+              <div class="flex items-end animate-fadeIn animation-delay-2000">
+                <div
+                  class="px-4 py-2 rounded-lg bg-black text-white text-sm shadow-lg"
+                >
+                  <p>Shoes which match with a black shirt</p>
+                </div>
+              </div>
+              <div class="flex items-start animate-fadeIn animation-delay-2500">
+                <div class="px-4 py-2 rounded-lg bg-gray-100 text-sm shadow-lg">
+                  <p>
+                    Sure! We have a variety of casual shoes that would go well
+                    with a black shirt. Here are some recommendations:
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-2 gap-4 mt-4 animate-fadeIn animation-delay-3000"
+              >
+                <div
+                  class="flex items-center space-x-4 bg-white shadow-lg rounded-lg p-4 cursor-pointer"
+                >
+                  <img
+                    src="https://uspoloassn.in/cdn/shop/files/2_5da35581-ebcc-4b4c-a69c-fa557dff48a6_540x.jpg?v=1700025363"
+                    alt="Vertical Stripe Crest Embroidered Polo Shirt"
+                    class="w-16 h-16 object-cover rounded-lg shadow-lg"
+                    width="100"
+                    height="100"
+                    style="aspect-ratio: 100 / 100; object-fit: cover"
+                  />
+                  <div class="flex-1">
+                    <h2 class="text-xs font-semibold">
+                      Vertical Stripe Crest Embroidered Polo Shirt
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-xxxxxs">
+                      - Polo collar - Crest embroidered at chest - Short button
+                      placket - Short sleeves
+                    </p>
+                    <div class="flex items-center justify-between mt-2">
+                      <span class="text-xs font-bold">$79.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center space-x-4 bg-white shadow-lg rounded-lg p-4 cursor-pointer"
+                >
+                  <img
+                    src="https://uspoloassn.in/cdn/shop/files/4_8afa82f0-245f-4294-ad80-b4b3e36a50de_1296x.jpg?v=1700631963"
+                    alt="Vertical Stripe Polo Shirt"
+                    class="w-16 h-16 object-cover rounded-lg shadow-lg"
+                    width="100"
+                    height="100"
+                    style="aspect-ratio: 100 / 100; object-fit: cover"
+                  />
+                  <div class="flex-1">
+                    <h2 class="text-xs font-semibold">
+                      Vertical Stripe Polo Shirt
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-xxxxxs">
+                      - Polo collar - Logo at chest - Short button placket -
+                      Short sleeves - Uneven vented hem
+                    </p>
+                    <div class="flex items-center justify-between mt-2">
+                      <span class="text-xs font-bold">$89.99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t p-4 bg-white shadow-md animate-fadeIn animation-delay-3500"
+        >
+          <form class="flex space-x-2">
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 shadow-lg"
+              placeholder="Type your message here..."
+            />
+            <button
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 shadow-lg"
+              type="submit"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
