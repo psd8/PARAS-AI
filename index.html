@@ -14,13 +14,14 @@
         setTimeout(() => {
           loader.classList.add("hidden");
           document.querySelector(".main").classList.remove("hidden");
+          document.querySelector(".loader-container").classList.add("hidden");
         }, 2000);
       }
     </script>
   </head>
   <body class="w-auto h-full bg-white">
-    <main class="flex h-full">
-      <div class="flex flex-1 self-center justify-center">
+    <main class="flex h-full w-full">
+      <div class="flex flex-1 self-center justify-center loader-container">
         <div class="flex flex-col align-center justify-center h-100">
           <img src="./logo.png" alt="Logo" class="w-64 mb-5" />
 
@@ -43,7 +44,7 @@
           </div>
         </div>
       </div>
-      <div class="main flex flex-col h-screen bg-white hidden">
+      <div class="main flex flex-col h-screen bg-white hidden w-full">
         <header
           class="flex items-center justify-between px-6 py-6 border-b bg-white shadow-md animate-fadeIn animation-delay-500"
         >
@@ -62,14 +63,14 @@
               style="aspect-ratio: 100 / 100; object-fit: cover"
             />
             <div class="flex-1">
-              <h2 class="text-sm font-semibold">US Polo Black T-shirt</h2>
+              <h2 class="text-sm font-semibold">
+                What type of shoes can be bought with this US Polo Black T-shirt
+                ?
+              </h2>
               <p class="text-gray-500 dark:text-gray-400 text-xs">
                 This black t-shirt is made from 100% organic cotton. It's soft,
                 comfortable, and perfect for everyday wear.
               </p>
-              <div class="flex items-center justify-between mt-2">
-                <span class="text-sm font-bold">$89.00</span>
-              </div>
             </div>
           </div>
         </div>
